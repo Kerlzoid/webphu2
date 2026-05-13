@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* ===== KẾ THỪA TOÀN BỘ STYLE TỪ TEMPLATE GỐC ===== */
         :root {
             --primary-blue: #8fc3f6;
             --secondary-blue: #93c4ef;
@@ -31,43 +30,46 @@
             --orange: #ff9800;
             --red: #dc3545;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         html {
             scroll-behavior: smooth;
         }
-        
+
         body {
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             color: var(--text-gray);
             background-color: var(--white);
         }
-        
-        h1, h2, h3, h4, h5, h6 {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Inter', sans-serif;
             font-weight: 700;
             line-height: 1.3;
             color: var(--dark-gray);
             margin-bottom: 1rem;
         }
-        
+
         h1 {
             font-size: 2.8rem;
         }
-        
         h2 {
             font-size: 2.2rem;
             text-align: center;
             margin-bottom: 2.5rem;
             position: relative;
         }
-        
         h2::after {
             content: '';
             position: absolute;
@@ -78,45 +80,39 @@
             left: 50%;
             transform: translateX(-50%);
         }
-        
         h3 {
             font-size: 1.6rem;
             color: var(--dark-blue);
         }
-        
         h4 {
             font-size: 1.3rem;
             color: var(--primary-blue);
         }
-        
+
         .section-title-left h2 {
             text-align: left;
         }
-        
         .section-title-left h2::after {
             left: 0;
             transform: none;
         }
-        
+
         .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
         .section-padding {
             padding: 80px 0;
         }
-        
         .section-bg-light {
             background-color: var(--light-gray);
         }
-        
         .section-bg-blue {
             background-color: var(--light-blue);
         }
-        
+
         .btn {
             display: inline-block;
             background-color: var(--primary-blue);
@@ -130,32 +126,27 @@
             transition: all 0.3s ease;
             text-decoration: none;
         }
-        
         .btn:hover {
             background-color: var(--dark-blue);
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        
         .btn-accent {
             background-color: var(--accent-teal);
         }
-        
         .btn-accent:hover {
             background-color: #0097a7;
         }
-        
         .btn-outline {
             background-color: transparent;
             border: 2px solid var(--primary-blue);
             color: var(--primary-blue);
         }
-        
         .btn-outline:hover {
             background-color: var(--primary-blue);
             color: var(--white);
         }
-        
+
         /* ===== HEADER ===== */
         header {
             background-color: rgba(255, 255, 255, 0.95);
@@ -166,49 +157,41 @@
             z-index: 1000;
             transition: all 0.3s ease;
         }
-        
         header.scrolled {
             background-color: rgba(255, 255, 255, 0.98);
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
         }
-        
         .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 15px 20px;
         }
-        
         .logo {
             display: flex;
             align-items: center;
         }
-        
         .logo-img {
-            height: 100px;
-            width: 150px;
+            height: 60px;
+            width: auto;
             margin-right: 10px;
         }
-        
         .logo h1 {
             font-size: 1.8rem;
             margin-bottom: 0;
             color: var(--primary-blue);
         }
-        
         .logo span {
             color: var(--accent-teal);
         }
-        
+
         nav ul {
             display: flex;
             list-style: none;
         }
-        
         nav li {
             margin-left: 25px;
         }
-        
         nav a {
             font-weight: 600;
             font-size: 1rem;
@@ -217,11 +200,10 @@
             position: relative;
             text-decoration: none;
         }
-        
-        nav a:hover, nav a.active {
+        nav a:hover,
+        nav a.active {
             color: var(--primary-blue);
         }
-        
         nav a::after {
             content: '';
             position: absolute;
@@ -232,23 +214,21 @@
             left: 0;
             transition: width 0.3s ease;
         }
-        
-        nav a:hover::after, nav a.active::after {
+        nav a:hover::after,
+        nav a.active::after {
             width: 100%;
         }
-        
+
         .header-cta {
             display: flex;
             align-items: center;
         }
-        
         .phone-number {
             font-weight: 700;
             color: var(--primary-blue);
             margin-right: 20px;
             font-size: 1.1rem;
         }
-        
         .mobile-menu-btn {
             display: none;
             font-size: 1.5rem;
@@ -257,42 +237,55 @@
             color: var(--primary-blue);
             cursor: pointer;
         }
-        
-        /* ===== ARTICLE STYLE (PHONG CÁCH BÁO CHÍ) ===== */
+
+        /* ===== ARTICLE HERO WITH BACKGROUND IMAGE ===== */
         .article-hero {
-            background: linear-gradient(135deg, rgba(143, 195, 246, 0.9), rgba(0, 76, 153, 0.8)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="10" fill="white" opacity="0.1"/><circle cx="80" cy="60" r="15" fill="white" opacity="0.1"/><circle cx="40" cy="80" r="12" fill="white" opacity="0.1"/></svg>');
-            background-size: cover;
+            background: linear-gradient(135deg, rgba(0, 76, 153, 0.75), rgba(143, 195, 246, 0.6)),
+                url('https://images.unsplash.com/photo-1548839140-29a749e1cf4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
             padding: 160px 0 80px;
             margin-top: 80px;
             color: white;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
-        
+        .article-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+            pointer-events: none;
+        }
         .article-hero h1 {
             color: white;
             font-size: 3.2rem;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            text-shadow: 2px 4px 20px rgba(0, 0, 0, 0.4);
+            position: relative;
+            z-index: 1;
         }
-        
         .article-meta {
             display: flex;
             justify-content: center;
             gap: 30px;
             margin-top: 20px;
             font-size: 1.1rem;
+            position: relative;
+            z-index: 1;
         }
-        
         .article-meta i {
             margin-right: 8px;
             color: var(--accent-teal);
         }
-        
+
+        /* ===== ARTICLE BODY ===== */
         .article-body {
             max-width: 900px;
             margin: 0 auto;
             padding: 40px 20px;
         }
-        
         .article-intro {
             font-size: 1.3rem;
             font-weight: 500;
@@ -302,61 +295,73 @@
             margin-bottom: 40px;
             font-style: italic;
         }
-        
         .article-section {
             margin-bottom: 50px;
         }
-        
         .article-section h2 {
             text-align: left;
             font-size: 1.9rem;
             margin-bottom: 25px;
         }
-        
         .article-section h2::after {
             left: 0;
             transform: none;
         }
-        
+
         .benefits-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             margin: 30px 0;
         }
-        
         .benefit-card {
             background: white;
-            border-radius: 10px;
+            border-radius: 16px;
             padding: 25px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             border-bottom: 4px solid var(--primary-blue);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            position: relative;
         }
-        
+        .benefit-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .benefit-card .benefit-img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            background: var(--light-blue);
+        }
         .benefit-icon {
             font-size: 2.2rem;
             color: var(--primary-blue);
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
-        
+
         .timeline {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             margin: 40px 0;
         }
-        
         .time-item {
             flex: 1;
             min-width: 150px;
             text-align: center;
             padding: 20px;
             background: white;
-            border-radius: 10px;
-            margin: 0 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            margin: 0 10px 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+            transition: transform 0.3s ease;
         }
-        
+        .time-item:hover {
+            transform: scale(1.03);
+        }
         .time-icon {
             width: 70px;
             height: 70px;
@@ -369,23 +374,20 @@
             color: var(--dark-blue);
             font-size: 1.8rem;
         }
-        
         .time-item h4 {
             margin-bottom: 10px;
             color: var(--dark-blue);
         }
-        
+
         .tips-list {
             list-style: none;
         }
-        
         .tips-list li {
             margin-bottom: 20px;
             padding-left: 35px;
             position: relative;
             font-size: 1.1rem;
         }
-        
         .tips-list li:before {
             content: '💧';
             position: absolute;
@@ -393,30 +395,29 @@
             color: var(--primary-blue);
             font-size: 1.3rem;
         }
-        
+
         .table-comparison {
             width: 100%;
             border-collapse: collapse;
             margin: 30px 0;
             background: white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
         }
-        
         .table-comparison th {
             background: var(--dark-blue);
             color: white;
             padding: 15px;
         }
-        
         .table-comparison td {
             padding: 15px;
             border: 1px solid var(--medium-gray);
         }
-        
         .table-comparison tr:nth-child(even) {
             background: var(--light-gray);
         }
-        
+
         .author-box {
             display: flex;
             align-items: center;
@@ -425,8 +426,8 @@
             padding: 30px;
             border-radius: 15px;
             margin: 50px 0 30px;
+            flex-wrap: wrap;
         }
-        
         .author-avatar {
             width: 100px;
             height: 100px;
@@ -437,153 +438,170 @@
             justify-content: center;
             color: white;
             font-size: 2.5rem;
+            flex-shrink: 0;
         }
-        
         .author-info h3 {
             margin-bottom: 5px;
         }
-        
         .author-info p {
             margin-bottom: 10px;
         }
-        
+
         .related-articles {
             background: var(--light-gray);
             padding: 60px 0;
         }
-        
         .related-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
-        
         .related-card {
             background: white;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease;
         }
-        
         .related-card:hover {
             transform: translateY(-5px);
         }
-        
         .related-image {
             height: 200px;
-            background: linear-gradient(45deg, var(--primary-blue), var(--accent-teal));
+            background-size: cover;
+            background-position: center;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-size: 3rem;
         }
-        
         .related-content {
             padding: 20px;
         }
-        
-        /* ===== FOOTER ===== */
+
+        /* ===== FOOTER NÂNG CẤP ===== */
         footer {
-            background-color: var(--dark-gray);
+            background-color: #1a1f2b;
             color: var(--white);
             padding: 60px 0 20px;
+            position: relative;
         }
-        
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 40px;
             margin-bottom: 40px;
         }
-        
+        .footer-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        .footer-logo-img {
+            height: 70px;
+            width: auto;
+            filter: brightness(1.1);
+            margin-bottom: 5px;
+        }
         .footer-logo h2 {
             color: var(--white);
             text-align: left;
+            margin-bottom: 5px;
         }
-        
         .footer-logo h2::after {
             display: none;
         }
-        
-        .footer-links h3, .footer-newsletter h3 {
+        .footer-links h3,
+        .footer-newsletter h3 {
             color: var(--white);
-            font-size: 1.3rem;
-            margin-bottom: 20px;
+            font-size: 1.2rem;
+            margin-bottom: 18px;
+            position: relative;
+            display: inline-block;
         }
-        
+        .footer-links h3::after,
+        .footer-newsletter h3::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background: var(--accent-teal);
+            bottom: -6px;
+            left: 0;
+        }
         .footer-links ul {
             list-style: none;
         }
-        
         .footer-links li {
             margin-bottom: 10px;
         }
-        
         .footer-links a {
             color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: color 0.3s ease, padding-left 0.3s ease;
         }
-        
         .footer-links a:hover {
             color: var(--accent-teal);
+            padding-left: 5px;
         }
-        
         .social-icons {
             display: flex;
             gap: 15px;
-            margin-top: 20px;
+            margin-top: 10px;
         }
-        
         .social-icons a {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             width: 40px;
             height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.08);
             border-radius: 50%;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease;
             color: white;
             text-decoration: none;
         }
-        
         .social-icons a:hover {
             background-color: var(--accent-teal);
+            transform: translateY(-3px);
         }
-        
         .footer-newsletter form {
             display: flex;
             margin-top: 15px;
+            border-radius: 30px;
+            overflow: hidden;
+            background: white;
         }
-        
         .footer-newsletter input {
             flex: 1;
-            padding: 12px 15px;
+            padding: 12px 18px;
             border: none;
-            border-radius: 4px 0 0 4px;
+            outline: none;
+            font-size: 0.95rem;
         }
-        
         .footer-newsletter button {
-            background-color: var(--primary-blue);
+            background-color: var(--accent-teal);
             color: var(--white);
             border: none;
-            padding: 0 20px;
-            border-radius: 0 4px 4px 0;
+            padding: 0 22px;
             cursor: pointer;
+            font-size: 1.1rem;
+            transition: background 0.3s;
         }
-        
+        .footer-newsletter button:hover {
+            background-color: #0097a7;
+        }
         .copyright {
             text-align: center;
             padding-top: 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(255, 255, 255, 0.6);
         }
-        
+
         /* ===== BACK TO HOME BUTTON ===== */
         .back-home {
             display: inline-block;
@@ -594,47 +612,59 @@
             border-radius: 30px;
             font-weight: 600;
             text-decoration: none;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
-        
         .back-home:hover {
             background: var(--dark-blue);
             color: white;
         }
-        
         .back-home i {
             margin-right: 8px;
         }
-        
-        /* ===== STYLE CHO NỘI DUNG MỚI ===== */
+
+        /* ===== HYDRATION LEVELS ===== */
         .hydration-levels {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 15px;
             margin: 30px 0;
             justify-content: center;
         }
         .level-item {
             flex: 1 1 200px;
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 12px;
             color: white;
             font-weight: bold;
             text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
         }
-        .level-1 { background-color: #00cc66; } /* Tốt */
-        .level-2 { background-color: #ffcc00; color: #333; } /* Bình thường */
-        .level-3 { background-color: #ff9933; } /* Mất nước nhẹ */
-        .level-4 { background-color: #ff5050; } /* Mất nước nặng */
-        
+        .level-1 {
+            background-color: #00cc66;
+        }
+        .level-2 {
+            background-color: #ffcc00;
+            color: #333;
+        }
+        .level-3 {
+            background-color: #ff9933;
+        }
+        .level-4 {
+            background-color: #ff5050;
+        }
+
         .faq-item {
             background: white;
             padding: 20px;
             margin-bottom: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
             border-left: 4px solid var(--primary-blue);
+            transition: transform 0.2s;
+        }
+        .faq-item:hover {
+            transform: translateX(4px);
         }
         .faq-question {
             font-weight: 700;
@@ -655,18 +685,68 @@
             display: inline-block;
             margin-left: 10px;
         }
-        
+
+        /* ===== HIỆU ỨNG SCROLL (ANIMATION) ===== */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .fade-left {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .fade-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .fade-right {
+            opacity: 0;
+            transform: translateX(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .fade-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
         /* ===== RESPONSIVE ===== */
         @media (max-width: 992px) {
-            h1 { font-size: 2.3rem; }
-            h2 { font-size: 1.8rem; }
-            .article-hero h1 { font-size: 2.5rem; }
-            .timeline { flex-direction: column; }
-            .time-item { margin-bottom: 20px; }
+            h1 {
+                font-size: 2.3rem;
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+            .article-hero h1 {
+                font-size: 2.5rem;
+            }
+            .timeline {
+                flex-direction: column;
+            }
+            .time-item {
+                margin: 0 0 20px;
+            }
         }
-        
+
         @media (max-width: 768px) {
-            .mobile-menu-btn { display: block; }
+            .mobile-menu-btn {
+                display: block;
+            }
             nav ul {
                 position: fixed;
                 top: 80px;
@@ -686,56 +766,73 @@
                 transform: translateY(0);
                 opacity: 1;
             }
-            nav li { margin: 15px 0; }
-            .header-cta .phone-number { display: none; }
-            .article-hero { padding: 140px 0 60px; }
-            .article-hero h1 { font-size: 2rem; }
-            .article-meta { flex-direction: column; gap: 10px; }
-            .author-box { flex-direction: column; text-align: center; }
+            nav li {
+                margin: 15px 0;
+            }
+            .header-cta .phone-number {
+                display: none;
+            }
+            .article-hero {
+                padding: 140px 0 60px;
+            }
+            .article-hero h1 {
+                font-size: 2rem;
+            }
+            .article-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .author-box {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-logo {
+                align-items: center;
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Header - Giữ nguyên thương hiệu VERILYS -->
+    <!-- Header -->
     <header>
         <div class="container header-container">
             <div class="logo">
                 <img src="https://i.ibb.co/Vp0dtZRw/logo-verilys.jpg" alt="VERILYS Logo" class="logo-img">
             </div>
-            
+
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
-            
+
             <nav id="mainNav">
                 <ul>
-                    <li><a href="index.html"><i class="fas fa-home"></i> Trang chủ</a></li>
-                    <li><a href="index.html#about">Về chúng tôi</a></li>
-                    <li><a href="index.html#products">Sản phẩm</a></li>
-                    <li><a href="index.html#contact">Liên hệ</a></li>
+                    <li><a href="https://bttduong1434-code.github.io/Home/"><i class="fas fa-home"></i> Trang chủ</a></li>
+                    <li><a href="https://bttduong1434-code.github.io/Home/#about">Về chúng tôi</a></li>
+                    <li><a href="https://bttduong1434-code.github.io/Home/#about">Sản phẩm</a></li>
+                    <li><a href="https://bttduong1434-code.github.io/Home/#contact">Liên hệ</a></li>
                 </ul>
             </nav>
-            
+
             <div class="header-cta">
                 <div class="phone-number">
                     <i class="fas fa-phone"></i> 092 893 09 30
                 </div>
-                <a href="index.html#purchase" class="btn btn-accent">Đặt hàng</a>
+                <a href="https://bttduong1434-code.github.io/Home/#purchase" class="btn btn-accent">Đặt hàng</a>
             </div>
         </div>
     </header>
 
     <!-- Nút quay về trang chủ -->
-    <a href="index.html" class="back-home">
+    <a href="https://bttduong1434-code.github.io/Home/" class="back-home">
         <i class="fas fa-arrow-left"></i> Quay lại Trang chủ VERILYS
     </a>
 
-    <!-- Hero bài viết -->
+    <!-- Hero bài viết (có ảnh nền) -->
     <section class="article-hero">
         <div class="container">
             <h1>UỐNG NƯỚC ĐÚNG CÁCH<br>Bí quyết vàng cho cơ thể khỏe mạnh</h1>
             <div class="article-meta">
-               
                 <span><i class="fas fa-user"></i> Chuyên gia dinh dưỡng VERILYS</span>
                 <span><i class="fas fa-clock"></i> 12 phút đọc</span>
             </div>
@@ -745,41 +842,47 @@
     <!-- Nội dung bài viết -->
     <div class="article-body">
         <!-- Giới thiệu -->
-        <div class="article-intro">
+        <div class="article-intro fade-up">
             <i class="fas fa-quote-left" style="color: var(--accent-teal); opacity: 0.5; font-size: 2rem; margin-right: 10px;"></i>
-            Nước chiếm 60-70% trọng lượng cơ thể người trưởng thành. Chỉ cần mất 2% nước trọng lượng cơ thể (tương đương 1-1.5 lít mồ hôi), hiệu suất thể chất và tinh thần của bạn đã giảm đáng kể. Uống nước tưởng chừng đơn giản nhưng không phải ai cũng biết cách để đạt hiệu quả tốt nhất cho sức khỏe.
+            Nước chiếm 60-70% trọng lượng cơ thể người trưởng thành. Chỉ cần mất 2% nước trọng lượng cơ thể, hiệu suất thể chất và tinh thần của bạn đã giảm đáng kể. Uống nước tưởng chừng đơn giản nhưng không phải ai cũng biết cách để đạt hiệu quả tốt nhất cho sức khỏe.
         </div>
 
-        <!-- Phần 1: Lợi ích tổng thể (Có bổ sung dữ liệu nghiên cứu) -->
+        <!-- Phần 1: Lợi ích (có ảnh minh họa) -->
         <section class="article-section">
-            <h2>💎 7 Lợi ích vàng của việc uống nước đúng cách</h2>
+            <h2 class="fade-left">💎 7 Lợi ích vàng của việc uống nước đúng cách</h2>
             <div class="benefits-grid">
-                <div class="benefit-card">
+                <div class="benefit-card scale-in">
+                    <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Trí não" class="benefit-img" loading="lazy">
                     <div class="benefit-icon"><i class="fas fa-brain"></i></div>
                     <h4>Tăng cường trí não <span class="badge">Nghiên cứu 2023</span></h4>
                     <p>Theo Đại học Harvard, mất nước 1-2% làm suy giảm trí nhớ ngắn hạn và khả năng tập trung tới 20%. Uống nước đều đặn giúp não bộ tỉnh táo, tăng hiệu suất làm việc.</p>
                 </div>
-                <div class="benefit-card">
+                <div class="benefit-card scale-in">
+                    <img src="https://i.ibb.co/5WNDsj4k/tim-m-ch.jpg" alt="Tim mạch" class="benefit-img" loading="lazy">
                     <div class="benefit-icon"><i class="fas fa-heart"></i></div>
                     <h4>Bảo vệ tim mạch</h4>
-                    <p>Uống đủ nước giúp máu lưu thông tốt, giảm độ nhớt, phòng ngừa nguy cơ nhồi máu cơ tim và đột quỵ. Một nghiên cứu trên Tạp chí Dinh dưỡng Lâm sàng Hoa Kỳ cho thấy người uống >5 ly nước/ngày giảm 41% nguy cơ đau tim.</p>
+                    <p>Uống đủ nước giúp máu lưu thông tốt, giảm độ nhớt, phòng ngừa nguy cơ nhồi máu cơ tim và đột quỵ. Người uống >5 ly nước/ngày giảm 41% nguy cơ đau tim.</p>
                 </div>
-                <div class="benefit-card">
+                <div class="benefit-card scale-in">
+                    <img src="https://i.ibb.co/Cs5zB9qz/th-n.png" alt="Thận" class="benefit-img" loading="lazy">
                     <div class="benefit-icon"><i class="fas fa-tint"></i></div>
                     <h4>Thanh lọc thận</h4>
                     <p>Nước giúp thận đào thải độc tố, ngăn ngừa sỏi thận và nhiễm trùng đường tiết niệu. Lượng nước tiểu lý tưởng là 1.5-2 lít/ngày, giúp giảm 50% nguy cơ hình thành sỏi.</p>
                 </div>
-                <div class="benefit-card">
+                <div class="benefit-card scale-in">
+                    <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Làm đẹp da" class="benefit-img" loading="lazy">
                     <div class="benefit-icon"><i class="fas fa-smile"></i></div>
                     <h4>Làm đẹp da</h4>
                     <p>Duy trì độ ẩm, tăng độ đàn hồi, làm chậm quá trình lão hóa. Da được cấp nước đủ sẽ giảm nếp nhăn tới 30% sau 8 tuần theo Học viện Da liễu Hoa Kỳ.</p>
                 </div>
-                <div class="benefit-card">
+                <div class="benefit-card scale-in">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Vận động" class="benefit-img" loading="lazy">
                     <div class="benefit-icon"><i class="fas fa-dumbbell"></i></div>
                     <h4>Nâng cao hiệu suất vận động</h4>
                     <p>Bù nước trong và sau khi tập giúp giảm mỏi cơ, chuột rút. Mất 3% nước có thể làm giảm 10% sức mạnh cơ bắp.</p>
                 </div>
-                <div class="benefit-card">
+                <div class="benefit-card scale-in">
+                    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Giảm cân" class="benefit-img" loading="lazy">
                     <div class="benefit-icon"><i class="fas fa-weight-scale"></i></div>
                     <h4>Hỗ trợ giảm cân</h4>
                     <p>Uống 500ml nước trước bữa ăn 30 phút giúp giảm 44% cân nặng sau 12 tuần (nghiên cứu từ Đại học Birmingham).</p>
@@ -787,60 +890,27 @@
             </div>
         </section>
 
-        <!-- Phần 2: Uống bao nhiêu là đủ? (Cập nhật công thức chi tiết) -->
-        <section class="article-section section-bg-light" style="padding: 40px; border-radius: 15px;">
+        <!-- Phần 2: Uống bao nhiêu? -->
+        <section class="article-section section-bg-light fade-up" style="padding: 40px; border-radius: 16px;">
             <h2>💧 Uống bao nhiêu nước mỗi ngày?</h2>
             <p style="font-size: 1.2rem; margin-bottom: 20px;">Công thức tiêu chuẩn (Viện Y học Hoa Kỳ): <strong style="color: var(--dark-blue); font-size: 1.5rem;">Cân nặng (kg) x 0.03 lít</strong> (có thể điều chỉnh theo hoạt động thể chất và thời tiết).</p>
-            
             <p style="margin-bottom: 10px;"><strong>Ví dụ:</strong> Người 60kg: 60 x 0.03 = 1.8 lít/ngày. Nếu vận động nhẹ, cộng thêm 0.5 - 1 lít.</p>
 
             <table class="table-comparison">
-                <tr>
-                    <th>Đối tượng</th>
-                    <th>Lượng nước khuyến nghị/ngày</th>
-                    <th>Ghi chú</th>
-                </tr>
-                <tr>
-                    <td>Người trưởng thành (ít vận động)</td>
-                    <td>1.5 - 2.0 lít (6-8 ly)</td>
-                    <td>Thời tiết mát mẻ</td>
-                </tr>
-                <tr>
-                    <td>Người tập thể thao / lao động nặng</td>
-                    <td>2.5 - 3.5 lít</td>
-                    <td>Có thể cần bù điện giải</td>
-                </tr>
-                <tr>
-                    <td>Phụ nữ mang thai</td>
-                    <td>2.0 - 2.3 lít</td>
-                    <td>Hỗ trợ nước ối</td>
-                </tr>
-                <tr>
-                    <td>Phụ nữ cho con bú</td>
-                    <td>2.3 - 2.7 lít</td>
-                    <td>Bù nước sản xuất sữa</td>
-                </tr>
-                <tr>
-                    <td>Trẻ em (4-8 tuổi)</td>
-                    <td>1.0 - 1.2 lít</td>
-                    <td>Theo nhu cầu</td>
-                </tr>
-                <tr>
-                    <td>Người cao tuổi</td>
-                    <td>1.5 - 1.8 lít (uống từ từ, chia nhỏ)</td>
-                    <td>Giảm cảm giác khát</td>
-                </tr>
-                <tr>
-                    <td>Người làm việc môi trường nóng</td>
-                    <td>3.0 - 4.0 lít</td>
-                    <td>Chia đều, bù muối khoáng</td>
-                </tr>
+                <tr><th>Đối tượng</th><th>Lượng nước khuyến nghị/ngày</th><th>Ghi chú</th></tr>
+                <tr><td>Người trưởng thành (ít vận động)</td><td>1.5 - 2.0 lít (6-8 ly)</td><td>Thời tiết mát mẻ</td></tr>
+                <tr><td>Người tập thể thao / lao động nặng</td><td>2.5 - 3.5 lít</td><td>Có thể cần bù điện giải</td></tr>
+                <tr><td>Phụ nữ mang thai</td><td>2.0 - 2.3 lít</td><td>Hỗ trợ nước ối</td></tr>
+                <tr><td>Phụ nữ cho con bú</td><td>2.3 - 2.7 lít</td><td>Bù nước sản xuất sữa</td></tr>
+                <tr><td>Trẻ em (4-8 tuổi)</td><td>1.0 - 1.2 lít</td><td>Theo nhu cầu</td></tr>
+                <tr><td>Người cao tuổi</td><td>1.5 - 1.8 lít (uống từ từ, chia nhỏ)</td><td>Giảm cảm giác khát</td></tr>
+                <tr><td>Người làm việc môi trường nóng</td><td>3.0 - 4.0 lít</td><td>Chia đều, bù muối khoáng</td></tr>
             </table>
             <p style="margin-top: 20px;"><i class="fas fa-info-circle" style="color: var(--accent-teal);"></i> Lưu ý: Nên ưu tiên nước tinh khiết đạt chuẩn, hạn chế nước có đường, caffein. Nước từ thương hiệu uy tín như VERILYS đảm bảo độ tinh khiết và an toàn.</p>
         </section>
 
-        <!-- Phần mới: Kiểm tra mất nước qua màu nước tiểu -->
-        <section class="article-section">
+        <!-- Phần kiểm tra mất nước -->
+        <section class="article-section fade-up">
             <h2>🚽 Kiểm tra tình trạng mất nước qua màu nước tiểu</h2>
             <p>Đây là cách đơn giản nhất để biết bạn có uống đủ nước hay không. So sánh màu sắc của bạn với bảng dưới đây:</p>
             <div class="hydration-levels">
@@ -852,52 +922,24 @@
             <p style="font-style: italic; margin-top: 10px;">Lưu ý: Một số thực phẩm (củ dền, cà rốt) hoặc thuốc có thể làm thay đổi màu nước tiểu tạm thời.</p>
         </section>
 
-        <!-- Phần 3: Thời điểm vàng để uống nước (Chi tiết hơn) -->
+        <!-- Phần 3: Thời điểm vàng -->
         <section class="article-section">
-            <h2>⏰ 7 "Khung giờ vàng" uống nước</h2>
-            <p>Chuyên gia VERILYS khuyến nghị thời điểm uống nước giúp cơ thể hấp thu tối đa và đồng bộ với đồng hồ sinh học:</p>
-            
+            <h2 class="fade-left">⏰ 7 "Khung giờ vàng" uống nước</h2>
+            <p class="fade-up">Chuyên gia VERILYS khuyến nghị thời điểm uống nước giúp cơ thể hấp thu tối đa và đồng bộ với đồng hồ sinh học:</p>
+
             <div class="timeline">
-                <div class="time-item">
-                    <div class="time-icon"><i class="fas fa-sun"></i></div>
-                    <h4>6:00 - 7:00</h4>
-                    <p>1 ly nước ấm (300ml) sau khi thức dậy: thanh lọc gan, thận, kích hoạt hệ tiêu hóa sau 8 giờ ngủ.</p>
-                </div>
-                <div class="time-item">
-                    <div class="time-icon"><i class="fas fa-briefcase"></i></div>
-                    <h4>9:00 - 10:00</h4>
-                    <p>Bù nước sau giờ làm việc căng thẳng, tăng tập trung cho buổi sáng.</p>
-                </div>
-                <div class="time-item">
-                    <div class="time-icon"><i class="fas fa-utensils"></i></div>
-                    <h4>11:30</h4>
-                    <p>1 ly (200ml) trước ăn trưa 30 phút: hỗ trợ tiêu hóa, kiểm soát cân nặng hiệu quả.</p>
-                </div>
-                <div class="time-item">
-                    <div class="time-icon"><i class="fas fa-moon"></i></div>
-                    <h4>15:00</h4>
-                    <p>Ly nước ấm chống lại cơn buồn ngủ, giảm cảm giác thèm đồ ngọt lúc xế chiều.</p>
-                </div>
-                <div class="time-item">
-                    <div class="time-icon"><i class="fas fa-utensils"></i></div>
-                    <h4>17:00</h4>
-                    <p>1 ly trước bữa tối (nếu ăn tối sớm) hoặc 18:30, giúp no nhẹ, tránh ăn quá nhiều.</p>
-                </div>
-                <div class="time-item">
-                    <div class="time-icon"><i class="fas fa-spa"></i></div>
-                    <h4>19:30 - 20:00</h4>
-                    <p>Sau ăn tối 1h, hỗ trợ chuyển hóa thức ăn.</p>
-                </div>
-                <div class="time-item">
-                    <div class="time-icon"><i class="fas fa-bed"></i></div>
-                    <h4>21:00 - 21:30</h4>
-                    <p>1/2 ly nước (100-150ml) trước ngủ 1h, phòng ngừa đột quỵ về đêm do mất nước, nhưng không quá nhiều để tránh tiểu đêm.</p>
-                </div>
+                <div class="time-item fade-up"><div class="time-icon"><i class="fas fa-sun"></i></div><h4>6:00 - 7:00</h4><p>1 ly nước ấm (300ml) sau khi thức dậy: thanh lọc gan, thận, kích hoạt hệ tiêu hóa sau 8 giờ ngủ.</p></div>
+                <div class="time-item fade-up"><div class="time-icon"><i class="fas fa-briefcase"></i></div><h4>9:00 - 10:00</h4><p>Bù nước sau giờ làm việc căng thẳng, tăng tập trung cho buổi sáng.</p></div>
+                <div class="time-item fade-up"><div class="time-icon"><i class="fas fa-utensils"></i></div><h4>11:30</h4><p>1 ly (200ml) trước ăn trưa 30 phút: hỗ trợ tiêu hóa, kiểm soát cân nặng hiệu quả.</p></div>
+                <div class="time-item fade-up"><div class="time-icon"><i class="fas fa-moon"></i></div><h4>15:00</h4><p>Ly nước ấm chống lại cơn buồn ngủ, giảm cảm giác thèm đồ ngọt lúc xế chiều.</p></div>
+                <div class="time-item fade-up"><div class="time-icon"><i class="fas fa-utensils"></i></div><h4>17:00</h4><p>1 ly trước bữa tối (nếu ăn tối sớm) hoặc 18:30, giúp no nhẹ, tránh ăn quá nhiều.</p></div>
+                <div class="time-item fade-up"><div class="time-icon"><i class="fas fa-spa"></i></div><h4>19:30 - 20:00</h4><p>Sau ăn tối 1h, hỗ trợ chuyển hóa thức ăn.</p></div>
+                <div class="time-item fade-up"><div class="time-icon"><i class="fas fa-bed"></i></div><h4>21:00 - 21:30</h4><p>1/2 ly nước (100-150ml) trước ngủ 1h, phòng ngừa đột quỵ về đêm do mất nước, nhưng không quá nhiều để tránh tiểu đêm.</p></div>
             </div>
         </section>
 
-        <!-- Phần 4: 7 Nguyên tắc vàng + mở rộng so sánh nước -->
-        <section class="article-section section-bg-blue" style="padding: 40px; border-radius: 15px;">
+        <!-- Phần 4: 7 Nguyên tắc vàng -->
+        <section class="article-section section-bg-blue fade-right" style="padding: 40px; border-radius: 16px;">
             <h2>✅ 7 Nguyên tắc uống nước đúng cách</h2>
             <ul class="tips-list">
                 <li><strong>Uống từ từ, chia nhỏ:</strong> Mỗi lần chỉ 150-250ml, cách nhau 1-2 giờ. Không uống ừng ực 500ml một lúc để tránh sốc thận và làm loãng dịch vị.</li>
@@ -919,11 +961,11 @@
             </table>
         </section>
 
-        <!-- Phần 5: Lưu ý đặc biệt và FAQ -->
-        <section class="article-section">
+        <!-- Phần 5: Sai lầm và giải pháp -->
+        <section class="article-section fade-up">
             <h2>⚠️ Những sai lầm cần tránh</h2>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
-                <div style="background: #fff0f0; padding: 20px; border-radius: 10px; border-left: 5px solid #dc3545;">
+                <div style="background: #fff0f0; padding: 20px; border-radius: 12px; border-left: 5px solid #dc3545;">
                     <h4 style="color: #dc3545;">❌ Sai lầm thường gặp</h4>
                     <ul style="list-style: none;">
                         <li style="margin-bottom: 10px;"><i class="fas fa-times-circle" style="color: #dc3545;"></i> Uống nước ngọt thay nước lọc</li>
@@ -932,7 +974,7 @@
                         <li style="margin-bottom: 10px;"><i class="fas fa-times-circle" style="color: #dc3545;"></i> Uống nước trong khi ăn (làm loãng enzyme tiêu hóa)</li>
                     </ul>
                 </div>
-                <div style="background: #e6f7e6; padding: 20px; border-radius: 10px; border-left: 5px solid #28a745;">
+                <div style="background: #e6f7e6; padding: 20px; border-radius: 12px; border-left: 5px solid #28a745;">
                     <h4 style="color: #28a745;">✅ Giải pháp</h4>
                     <ul style="list-style: none;">
                         <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #28a745;"></i> Ưu tiên nước tinh khiết</li>
@@ -944,25 +986,16 @@
             </div>
         </section>
 
-        <!-- Phần Câu hỏi thường gặp (FAQ) - Mới -->
-        <section class="article-section">
+        <!-- FAQ -->
+        <section class="article-section fade-up">
             <h2>❓ Câu hỏi thường gặp về uống nước</h2>
-            <div class="faq-item">
-                <div class="faq-question">1. Uống nước đóng chai để qua đêm có tốt không?</div>
-                <div class="faq-answer">Nước tinh khiết đóng chai VERILYS nếu để qua đêm ở nhiệt độ phòng, miệng chai đậy kín vẫn an toàn. Tuy nhiên, nên uống trong ngày và không uống trực tiếp từ chai nếu đã để lâu ngoài không khí để tránh vi khuẩn từ miệng xâm nhập.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">2. Có nên uống nước trong khi tập thể dục?</div>
-                <div class="faq-answer">Có. Nên uống từng ngụm nhỏ mỗi 15-20 phút trong khi tập để duy trì lượng nước và điện giải, tránh mất sức.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">3. Uống nhiều nước có gây hại thận không?</div>
-                <div class="faq-answer">Với người khỏe mạnh, thận có thể xử lý tới 0.8-1 lít nước mỗi giờ. Uống quá nhiều trong thời gian ngắn có thể gây ngộ độc nước (hạ natri máu). Hãy tuân thủ liều lượng khuyến nghị.</div>
-            </div>
+            <div class="faq-item"><div class="faq-question">1. Uống nước đóng chai để qua đêm có tốt không?</div><div class="faq-answer">Nước tinh khiết đóng chai VERILYS nếu để qua đêm ở nhiệt độ phòng, miệng chai đậy kín vẫn an toàn. Tuy nhiên, nên uống trong ngày và không uống trực tiếp từ chai nếu đã để lâu ngoài không khí để tránh vi khuẩn từ miệng xâm nhập.</div></div>
+            <div class="faq-item"><div class="faq-question">2. Có nên uống nước trong khi tập thể dục?</div><div class="faq-answer">Có. Nên uống từng ngụm nhỏ mỗi 15-20 phút trong khi tập để duy trì lượng nước và điện giải, tránh mất sức.</div></div>
+            <div class="faq-item"><div class="faq-question">3. Uống nhiều nước có gây hại thận không?</div><div class="faq-answer">Với người khỏe mạnh, thận có thể xử lý tới 0.8-1 lít nước mỗi giờ. Uống quá nhiều trong thời gian ngắn có thể gây ngộ độc nước (hạ natri máu). Hãy tuân thủ liều lượng khuyến nghị.</div></div>
         </section>
 
-        <!-- Hộp tác giả / chuyên gia -->
-        <div class="author-box">
+        <!-- Hộp tác giả -->
+        <div class="author-box fade-up">
             <div class="author-avatar">
                 <i class="fas fa-user-md"></i>
             </div>
@@ -973,45 +1006,43 @@
             </div>
         </div>
 
-        <!-- Lời kêu gọi hành động: Mua nước tinh khiết VERILYS -->
-        <div style="text-align: center; margin: 50px 0; padding: 30px; background: linear-gradient(135deg, var(--light-blue), white); border-radius: 15px;">
+        <!-- CTA -->
+        <div style="text-align: center; margin: 50px 0; padding: 30px; background: linear-gradient(135deg, var(--light-blue), white); border-radius: 16px;" class="scale-in">
             <h3 style="color: var(--dark-blue);">🚰 Nguồn nước bạn dùng có thực sự tinh khiết?</h3>
             <p style="font-size: 1.2rem; margin-bottom: 25px;">Trải nghiệm ngay nước tinh khiết VERILYS - Công nghệ lọc RO 9 bước, đạt chuẩn ISO 22000:2018 và FSSC 22000, giữ lại khoáng chất có lợi, loại bỏ hoàn toàn tạp chất.</p>
-            <a href="index.html#purchase" class="btn btn-accent" style="padding: 15px 45px; font-size: 1.2rem;">
+            <a href="https://bttduong1434-code.github.io/Home/#purchase" class="btn btn-accent" style="padding: 15px 45px; font-size: 1.2rem;">
                 <i class="fas fa-cart-shopping"></i> Đặt mua VERILYS ngay
             </a>
             <p style="margin-top: 15px; color: var(--dark-blue);">Miễn phí vận chuyển cho đơn hàng trên 200k</p>
         </div>
     </div>
 
-   
-
-    <!-- Footer (giống templete) -->
+    <!-- Footer nâng cấp (có logo ảnh) -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <h2>VERI<span style="color: var(--accent-teal);">LYS</span></h2>
-                    <p>Nước tinh khiết cao cấp - Bảo vệ sức khỏe gia đình bạn</p>
+                    <img src="https://i.ibb.co/Vp0dtZRw/logo-verilys.jpg" alt="VERILYS Logo" class="footer-logo-img" style="height:70px; filter: brightness(1.2);">
+                    <p style="color: rgba(255,255,255,0.8);">Nước tinh khiết cao cấp - Bảo vệ sức khỏe gia đình bạn</p>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61587116204545"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61587116204545"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61587116204545"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61587116204545"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="footer-links">
                     <h3>Liên kết nhanh</h3>
                     <ul>
-                        <li><a href="index.html">Trang chủ</a></li>
-                        <li><a href="index.html#why-choose">Lý do chọn VERILYS</a></li>
-                        <li><a href="index.html#about">Về chúng tôi</a></li>
-                        <li><a href="index.html#process">Quy trình sản xuất</a></li>
-                        <li><a href="index.html#products">Sản phẩm</a></li>
+                        <li><a href="https://bttduong1434-code.github.io/Home/">Trang chủ</a></li>
+                        <li><a href="https://bttduong1434-code.github.io/Home/#why-choose">Lý do chọn VERILYS</a></li>
+                        <li><a href="https://bttduong1434-code.github.io/Home/#about">Về chúng tôi</a></li>
+                        <li><a href="https://verilysro.lovable.app/">Quy trình sản xuất</a></li>
+                        <li><a href="https://bttduong1434-code.github.io/Home/#about">Sản phẩm</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-links">
                     <h3>Chính sách</h3>
                     <ul>
@@ -1022,17 +1053,17 @@
                         <li><a href="#">Chính sách bảo hành</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-newsletter">
                     <h3>Đăng ký nhận tin</h3>
-                    <p>Nhận thông tin khuyến mãi và tin tức mới nhất từ VERILYS</p>
+                    <p style="color: rgba(255,255,255,0.7);">Nhận thông tin khuyến mãi và tin tức mới nhất từ VERILYS</p>
                     <form>
                         <input type="email" placeholder="Email của bạn">
                         <button type="submit"><i class="fas fa-paper-plane"></i></button>
                     </form>
                 </div>
             </div>
-            
+
             <div class="copyright">
                 <p>&copy; 2026 VERILYS - Nước tinh khiết cao cấp. Bài viết thuộc chuyên mục Sức khỏe & Dinh dưỡng. Mọi thông tin chỉ mang tính tham khảo, không thay thế chỉ định bác sĩ.</p>
             </div>
@@ -1044,7 +1075,6 @@
         // ===== MOBILE MENU TOGGLE =====
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mainNav = document.getElementById('mainNav');
-        
         mobileMenuBtn.addEventListener('click', function() {
             mainNav.classList.toggle('active');
             const icon = this.querySelector('i');
@@ -1056,7 +1086,7 @@
                 icon.classList.add('fa-bars');
             }
         });
-        
+
         // ===== HEADER SCROLL EFFECT =====
         function handleHeaderScroll() {
             const header = document.querySelector('header');
@@ -1068,7 +1098,7 @@
         }
         window.addEventListener('scroll', handleHeaderScroll);
         handleHeaderScroll();
-        
+
         // ===== ĐÓNG MENU KHI CLICK LINK =====
         const navLinks = document.querySelectorAll('nav a');
         navLinks.forEach(link => {
@@ -1081,8 +1111,8 @@
                 }
             });
         });
-        
-        // ===== SMOOTH SCROLL CHO ANCHOR TRONG TRANG (nếu có) =====
+
+        // ===== SMOOTH SCROLL CHO ANCHOR =====
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 const href = this.getAttribute('href');
@@ -1090,14 +1120,23 @@
                     e.preventDefault();
                     const target = document.querySelector(href);
                     if (target) {
-                        window.scrollTo({
-                            top: target.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
+                        window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
                     }
                 }
             });
         });
+
+        // ===== HIỆU ỨNG CUỘN (INTERSECTION OBSERVER) =====
+        const animatedElements = document.querySelectorAll('.fade-up, .fade-left, .fade-right, .scale-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
+
+        animatedElements.forEach(el => observer.observe(el));
     </script>
 </body>
 </html>
